@@ -1,0 +1,116 @@
+\documentclass{sig-alternate}
+
+\usepackage[bf,small]{caption}
+\usepackage{subfig}
+%\usepackage{subfigure}		% deprecated, preferable to use subfig
+
+\usepackage[hyphens]{url}
+%\usepackage{hyperref}
+%\usepackage{breakurl}
+\usepackage{cite}
+\usepackage{epsfig}
+\usepackage{array}
+\usepackage{color}
+\usepackage{pifont}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{fixltx2e}
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+
+%\usepackage{times}
+
+
+% to remove the ACM Permission block on the first page 
+% in case of the error "Package caption Error: No float type 'copyrightbox' defined."
+%\makeatletter
+%\let\@copyrightspace\relax
+%\makeatother
+
+
+% to reduce white-space between captions (of figures) and text
+%\setlength{\dbltextfloatsep}{-2mm}
+%\setlength{\textfloatsep}{10pt}
+%\setlength{\abovedisplayskip}{1.5ex}
+%\setlength{\belowdisplayskip}{1ex}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+
+
+\newcommand{\todo}[1]{\textcolor{red}{\bf TODO: #1}}
+\newcommand{\new}[1]{\textcolor{blue}{NEW: #1}}
+
+
+
+\sloppy
+\pagestyle{plain}
+
+\begin{document}
+
+\clubpenalty=10000
+\widowpenalty=10000
+
+\title{Evolution of Norms in Dyadic Email Exchange}
+
+
+\numberofauthors{5}
+\author{
+\alignauthor Farshad Kooti\\
+       \affaddr{USC Information Sciences Institute, USA}\\
+\alignauthor Luca Maria Aiello\\
+       \affaddr{Yahoo! Labs Barcelona, Spain}\\
+       %\affaddr{bviswana@mpi-sws.org}
+\alignauthor Mihajlo Grbovic\\
+       \affaddr{Yahoo! Labs Sunnyvale, USA}\\
+       %\affaddr{farshad@mpi-sws.org}
+\and 
+\alignauthor Kristina Lerman\\
+       \affaddr{USC Information Sciences Institute, USA}\\
+       %\affaddr{nkrsharma@gmail.com}
+\alignauthor Amin Montrach\\
+       \affaddr{Yahoo! Labs Barcelona, Spain}\\
+       %\affaddr{korlamgautam@gmail.com}
+}
+
+
+\maketitle
+\begin{abstract}
+
+% A category with only the three required fields
+%\category{H.3.5}{Online Information Services}{Web-based services}
+%\category{C.2.0}{Computer-Communication Networks}{General}[Security and protection]
+\keywords{Emailing behavior, information over, linguistic norms}
+
+
+\end{abstract}
+
+\input{introduction}
+
+\input{behavior}
+
+\input{overload}
+
+\input{norms}
+
+\input{related}
+
+\input{conclusion}
+
+
+
+
+
+\cite{tunkrank}
+
+\bibliographystyle{abbrv}
+{\small
+\bibliography{email_norm}
+}
+
+\balancecolumns
+
+\end{document}
