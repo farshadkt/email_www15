@@ -1,0 +1,130 @@
+\documentclass{sig-alternate}
+
+% Use this command to override the default ACM copyright statement (e.g. for preprints). 
+% Consult the conference website for the camera-ready copyright statement.
+
+% Load basic packages
+\usepackage{balance}  % to better equalize the last page
+\usepackage{graphics} % for EPS, load graphicx instead
+%\usepackage{graphicx}
+\usepackage{times}    % comment if you want LaTeX's default font
+%\usepackage[hide]{chato-notes} % Set to "`hide"' for final submission
+\usepackage{url}      % llt: nicely formatted URLs
+
+%\usepackage{multirow} % To have things span multiple rows in a table
+%\usepackage{rotating} % To have vertical text
+%\usepackage{longtable} % To have automatic line breaks for long lines in table. See: http://stackoverflow.com/questions/1918366/automated-line-breaks-in-latex-tables
+\usepackage{subfigure}
+\usepackage{epstopdf}     
+\usepackage{epsfig}
+\usepackage{amsmath}
+
+\newcommand{\bm}[1]{\textcolor{blue}{#1}}
+
+
+\newcommand{\specialcell}[2][c]{%for multi-line cells in tables
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+% llt: Define a global style for URLs, rather that the default one
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\bf\ttfamily}}}
+\makeatother
+\urlstyle{leo}
+
+
+% To make various LaTeX processors do the right thing with page size.
+\def\pprw{8.5in}
+\def\pprh{11in}
+\special{papersize=\pprw,\pprh}
+\setlength{\paperwidth}{\pprw}
+\setlength{\paperheight}{\pprh}
+\setlength{\pdfpagewidth}{\pprw}
+\setlength{\pdfpageheight}{\pprh}
+
+% Make sure hyperref comes last of your loaded packages, 
+% to give it a fighting chance of not being over-written, 
+% since its job is to redefine many LaTeX commands.
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+pdftitle={The Social Name-Letter Effect on Online Social Networks},
+pdfauthor={LaTeX},
+pdfkeywords={name-letter effect, Online Social Networks, same-name effect},
+bookmarksnumbered,
+pdfstartview={FitH},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=black,
+breaklinks=true,
+}
+
+% create a shortcut to typeset table headings
+\newcommand\tabhead[1]{\small\textbf{#1}}
+
+\begin{document}
+
+
+
+\title{Evolution of Norms in Dyadic Email Exchange}
+
+
+\numberofauthors{5}
+\author{
+\alignauthor Farshad Kooti\\
+       \affaddr{USC Information Sciences Institute, USA}\\
+\alignauthor Luca Maria Aiello\\
+       \affaddr{Yahoo! Labs Barcelona, Spain}\\
+       %\affaddr{bviswana@mpi-sws.org}
+\alignauthor Mihajlo Grbovic\\
+       \affaddr{Yahoo! Labs Sunnyvale, USA}\\
+       %\affaddr{farshad@mpi-sws.org}
+\and 
+\alignauthor Kristina Lerman\\
+       \affaddr{USC Information Sciences Institute, USA}\\
+       %\affaddr{nkrsharma@gmail.com}
+\alignauthor Amin Montrach\\
+       \affaddr{Yahoo! Labs Barcelona, Spain}\\
+       %\affaddr{korlamgautam@gmail.com}
+}
+
+
+\maketitle
+
+
+\keywords{Emailing behavior, information over, linguistic norms}
+
+% A category with only the three required fields
+%\category{H.3.5}{Online Information Services}{Web-based services}
+%\category{C.2.0}{Computer-Communication Networks}{General}[Security and protection]
+
+\begin{abstract}
+
+\end{abstract}
+
+\input{introduction}
+
+\input{behavior}
+
+\input{overload}
+
+\input{norms}
+
+\input{related}
+
+\input{conclusion}
+
+
+
+
+
+\cite{liben2007link}
+
+% END OF PAPER - bibliography follows
+%\vspace{-1mm}
+\bibliographystyle{abbrv}
+\bibliography{email_norm}
+
+
+\end{document}
